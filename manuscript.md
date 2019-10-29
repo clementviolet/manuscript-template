@@ -1,7 +1,7 @@
 # The model
 
-This is a citation: @HampAnde15 -- we can also have citations in brackets
-[@HampAnde15].
+This is a citation: @Martinez2002 -- we can also have citations in brackets
+[@Martinez2002].
 
 ## Lists
 
