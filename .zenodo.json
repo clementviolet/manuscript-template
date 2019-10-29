@@ -1,17 +1,17 @@
 {
-  "title": "Some notes on population dynamics",
+  "title": "Title",
   "upload_type": "preprint",
   "access_right": "open",
   "license": "CC-BY",
-  "language": "en",
+  "language": "fr",
   "creators": [
     {
-      "affiliation": "Université de Montréal; QCBS",
-      "familyname": "Poisot",
-      "givennames": "Timothée",
-      "orcid": "0000-0002-0735-5184"
+      "affiliation": "Université de Rennes 1",
+      "familyname": "Violet",
+      "givennames": "Clément",
+      "orcid": "0000-0001-6217-5891"
     }
   ],
   "description": "This document is intended purely as a demo for the manuscript building system.",
-  "keywords": ["population dynamics", "differential equations", "community ecology"]
+  "keywords": [""]
 }
