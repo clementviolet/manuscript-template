@@ -15,7 +15,7 @@ install:
   - ./barlock/bootstrap.sh
 
 script:
-  - R ./build.R
+  - Rscript ./build.R
   - python barlock/build.py
 
 before_deploy:
