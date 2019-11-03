@@ -1,6 +1,5 @@
 ---
 authors: Clément Violet
-date: Semestre 9
 documentclass: report
 classoption: oneside
 mainlang: french
