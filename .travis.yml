@@ -11,9 +11,11 @@ before_install:
   - chmod u+x barlock/bootstrap.sh
 
 install:
+  - apt-get install -y r-base
   - ./barlock/bootstrap.sh
 
 script:
+  - R ./build.R
   - python barlock/build.py
 
 before_deploy:
