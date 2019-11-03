@@ -12,6 +12,7 @@ before_install:
 
 install:
   - sudo apt-get install -y r-base
+  - Rscript install_packages.R
   - ./barlock/bootstrap.sh
 
 script:
