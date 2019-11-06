@@ -15,7 +15,7 @@ toc: yes
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-knitr::opts_chunk$set(fig.path = "figs/")
+knitr::opts_chunk$set(fig.path = "figures/")
 ```
 
 ## R Markdown
