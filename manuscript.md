@@ -1,3 +1,22 @@
+---
+authors: Clément Violet
+documentclass: article
+classoption: oneside
+dates: false
+langue: true
+polyglossia-lang:
+  name: english
+geometry:
+  - left = 2cm
+  - right = 2cm
+  - top = 2cm
+  - bottom = 2cm
+mainfont: Lato
+fontsize: 12pt
+toc: false
+linestretch: false
+---
+
 # The model
 
 This is a citation: @Martinez2002 -- we can also have citations in brackets
