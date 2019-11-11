@@ -13,5 +13,6 @@
     }
   ],
   "description": "This document is intended purely as a demo for the manuscript building system.",
-  "keywords": [""]
+  "keywords": [""],
+  "notes": "https://github.com/clementviolet/manuscript-template/"
 }
