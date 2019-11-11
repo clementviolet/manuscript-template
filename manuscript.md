@@ -39,9 +39,13 @@ $$J'(p) = \frac{1}{\text{log}(S)}\times\left(-\sum p \text{log}(p)\right)$$ {#eq
 
 We can do tables:
 
-| Column 1 | Column 2 |
-| -------- | --------:|
-| c1       |       c2 |
+| Column 1 | Column 2 |      Column 3    |
+| -------- | :-------:| ---------------: |
+| c1       |    c2    |       $\alpha$   |
+
+Table: Demonstration of a simple table. {#tbl:1}
+
+The first column is neat, the second centered and the third right-aligned. We can also cite table with {@tbl:1}
 
 # Figures
 
