@@ -1,0 +1,126 @@
+@text-font-stack: "Source Sans Pro", serif;
+@code-font-stack: "Source Code Pro", monospace;
+
+@font-size: 18px;
+
+@url-color: #428bca;
+@url-color-hover: darken(@url-color, 15%);
+@ref-color: #e9380c;
+@meta-color: #a0a8a3;
+
+body {
+   font-size: @font-size;
+   font-family: @text-font-stack;
+   b, strong {
+      font-weight: 600;
+   }
+   code, pre {
+      font-family: @code-font-stack;
+   }
+}
+
+.container {
+   display: block !important;
+   margin: 0px auto;
+   padding: 3em;
+   max-width: 1000px;
+}
+
+header {
+   background-color: lighten(@meta-color, 33%);
+   h1 {
+      margin-top: 0em;
+   }
+}
+
+a {
+   text-decoration: none;
+   color: @url-color;
+   &:hover {
+      color: @url-color-hover;
+   }
+}
+
+article {
+   p {
+      line-height: 150%;
+   }
+   &.container {
+      max-width: 800px;
+   }
+   h1 {
+      margin-top: 3.2em;
+   }
+   h2 {
+      margin-top: 2.1em;
+      margin-bottom: 0px;
+      padding-bottom: 0px;
+   }
+}
+
+.citation {
+   border-bottom: 1px dashed @ref-color;
+}
+
+figure {
+   font-size: 80%;
+   text-align: center;
+   img {
+      max-width: 100%;
+   }
+   color: darken(@meta-color, 10%);
+   border: 1px solid lighten(@meta-color, 20%);
+   margin: 2em 0;
+   figcaption{
+      text-align: left;
+      padding: 1em;
+      span {
+         color: darken(@meta-color, 20%);
+         font-weight: 600;
+      }
+   }
+}
+
+table {
+   border-collapse: collapse;
+}
+ 
+ table td {
+   text-align: center; 
+   padding: 10px;
+   vertical-align: middle;
+   border-top: 3px solid lighten(@meta-color, 20%);
+   border-bottom: 3px solid lighten(@meta-color, 20%);
+}
+
+table th {
+   padding: 10px;
+}
+
+ nav.artifacts {
+    text-align: center;
+   background-color: lighten(@meta-color, 29%);
+   padding: 1em;
+}
+
+.creators{
+   .creator {
+      margin-bottom: 0.5em;
+      .author, .affiliation, .orcid {
+         display: inline-block;
+         color: darken(@meta-color, 10%);
+      }
+      .author{color: @ref-color; font-weight: 600;}
+      .orcid{padding-left: 2em; font-family: @code-font-stack; float: right;}
+   }
+}
+
+summary {
+   padding-top: 2em;
+   padding-left: 3em;
+   padding-right: 3em;
+   &::before {
+      content: "Abstract";
+      font-weight: 600;
+   }
+}

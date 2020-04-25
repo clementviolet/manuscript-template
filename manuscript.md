@@ -15,6 +15,7 @@ mainfont: Lato
 fontsize: 12pt
 toc: false
 linestretch: false
+filename: manuscript-template
 ---
 
 # The model
