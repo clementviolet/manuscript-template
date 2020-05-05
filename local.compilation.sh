@@ -16,7 +16,7 @@ pandoc manuscript.md -s -o rendered/$repo.tex --filter pandoc-xnos --bibliograph
 
 # Create pdf file
 cd rendered
-latexmk ms_m2.tex -lualatex --file-line-error --interaction=nonstopmode
+latexmk $repo.tex -lualatex --file-line-error --interaction=nonstopmode
 
 # Cleaning up
 latexmk -c
