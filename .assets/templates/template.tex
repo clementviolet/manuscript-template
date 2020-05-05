@@ -83,10 +83,13 @@ $endif$
 \newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
 \let\PBS=\PreserveBackslash
 
+% Create new command to deal with with pandoc's super/sub script.
 $if(subscript)$
 \newcommand{\textsubscr}[1]{\ensuremath{_{\scriptsize\textrm{#1}}}}
 $endif$
-
+$if(superscript)$
+\newcommand{\textsuperscr}[1]{\ensuremath{^{\scriptsize\textrm{#1}}}}
+$endif$
 
 % Web-style links:
 
@@ -127,10 +130,15 @@ $endif$
 % Section numbering.  
 % Here again is a variable you can specify on the commandline
 % `markdown2pdf my.txt --number-sections --xetex --template=/wherever/this/is -o my.pdf`
-\usepackage{caption}
-\setcounter{secnumdepth}{0}
-\usepackage{cleveref}
 
+$if(numbersections)$
+\setcounter{secnumdepth}{$if(secnumdepth)$$secnumdepth$$else$5$endif$}
+$else$
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+$endif$
+
+\usepackage{caption}
+\usepackage{cleveref}
 
 %% Table
 \usepackage{longtable}
@@ -196,12 +204,12 @@ $endfor$
 $if(title)$
 \title{$title$}
 $endif$
-$if(dates)$
+$if(date)$
 \date{$date$}
 $endif$
 
-$if(author)$
-\author{$for(author)$$author$$sep$ \and $endfor$}
+$if(creators)$
+\author{$for(creators)$$creators.givennames$ \textsc{$creators.familyname$}\\$endfor$}
 $endif$
 
 % At last: 
@@ -228,13 +236,13 @@ $if(title)$
 \maketitle
 $endif$
 
-{\small
-$for(creators)$
-\textsc{$creators.givennames$\,$creators.familyname$}\\
-\emph{$creators.affiliation$}\hfill\texttt{$creators.orcid$}
-
-$endfor$
-}
+%{\small
+%$for(creators)$
+%author{$creators.givennames$ \textsc{$creators.familyname$}}
+%\textsc{$creators.givennames$\,$creators.familyname$}\\
+%\emph{$creators.affiliation$}\hfill\texttt{$creators.orcid$}
+%$endfor$
+%}
 
 $if(toc)$
 \tableofcontents
