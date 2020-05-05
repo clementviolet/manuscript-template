@@ -1,21 +1,19 @@
 ---
-authors: Clément Violet
-documentclass: article
+documentclass: report
 classoption: oneside
-dates: false
-langue: true
+date: false
 polyglossia-lang:
-  name: english
+  name: french
 geometry:
   - left = 2cm
   - right = 2cm
   - top = 2cm
   - bottom = 2cm
-mainfont: Lato
 fontsize: 12pt
-toc: false
+toc: true
 linestretch: false
 filename: manuscript-template
+bibliography: [./rreferences.bib] # This field is overid when pandoc is use, but it allow to use citation completion when writting.
 ---
 
 # The model
