@@ -58,26 +58,6 @@ $endif$
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
-\makeatletter
-\newcounter{tableno}
-\newenvironment{tablenos:no-prefix-table-caption}{
-  \caption@ifcompatibility{}{
-    \let\oldthetable\thetable
-    \let\oldtheHtable\theHtable
-    \renewcommand{\thetable}{tableno:\thetableno}
-    \renewcommand{\theHtable}{tableno:\thetableno}
-    \stepcounter{tableno}
-    \captionsetup{labelformat=empty}
-  }
-}{
-  \caption@ifcompatibility{}{
-    \captionsetup{labelformat=default}
-    \let\thetable\oldthetable
-    \let\theHtable\oldtheHtable
-    \addtocounter{table}{-1}
-  }
-}
-\makeatother
 
 \usepackage{array}
 \newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
