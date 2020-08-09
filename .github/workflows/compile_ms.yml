@@ -50,7 +50,7 @@ jobs:
           rm -Rf stixfonts-master/
       - name: Create the website
         run: |
-          pandoc manuscript.md -o rendered/index.html --filter pandoc-xnos --template=.assets/templates/template.html --bibliography=references.json --metadata-file=metadata.json --webtex
+          pandoc manuscript.md -o rendered/index.html --filter pandoc-xnos --template=.assets/templates/template.html --bibliography=references.json --metadata-file=metadata.json --include-in-header=.assets/templates/tocify
           mkdir rendered/css/
           mkdir rendered/js/
           cp .assets/templates/{style.less,jquery.tocify.css,bootstrap.css} rendered/css/
