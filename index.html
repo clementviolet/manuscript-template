@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Title</title>
+      <!-- <script src="https://hypothes.is/embed.js" async></script> -->
+      <!--fonts-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+      <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600|Source+Sans+Pro:300,300i,400,400i,600,600i&display=swap&subset=greek" rel="stylesheet">
+      <link rel="stylesheet/less" type="test/css" href="css/style.less">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+      <link type="text/css" rel="stylesheet" href="css/jquery.tocify.css" />
+      <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+   </head>
+   <div id="toc"></div>
+   <body>
+      <header>
+         <section class="container">
+            <h1>Title</h1>
+            <section class="creators">
+                              <div class="creator">
+                  <div class="author">Clément Violet</div>
+                  <div class="affiliation">Université de Rennes 1</div>
+                  <div class="orcid">0000-0001-6217-5891</div>
+               </div>
+                           </section>
+            <section class="supervisors">
+                           </section>
+            <summary>
+               This document is intended purely as a demo for the manuscript building system.
+               <!--<div class="keywords">-->
+               <!---->
+               <!--<span class="keyword"></span>-->
+               <!---->
+               <!--</div>-->
+            </summary>
+         </section>
+      </header>
+
+      <nav class="artifacts">
+         <a href="https://github.com/clementviolet/manuscript-template/" title="Github repo - Markdown" target="_blank"><img src="https://img.shields.io/badge/write-github-blue.svg" /></a>
+         <a href="manuscript-template.pdf" title="Github repo - PDF" target="_blank"><img src="https://img.shields.io/badge/read-pdf-green.svg" /></a>
+         <a href="manuscript-template.docx" title="Github repo - MS Word" target="_blank"><img src="https://img.shields.io/badge/read-docx-yellow.svg" /></a>
+         <a href="manuscript-template.tex" title="Github repo - LuaLaTeX" target="_blank"><img src="https://img.shields.io/badge/read-LuaLaTeX-blueviolet" /></a>
+      </nav>
+
+      <article class="container">
+                  <h1 id="the-model">The model</h1>
+                  <p>This is a citation: <span class="citation" data-cites="Martinez2002">Martinez (<a href="#ref-Martinez2002" role="doc-biblioref">2002</a>)</span> – we can also have citations in brackets <span class="citation" data-cites="Martinez2002">(Martinez <a href="#ref-Martinez2002" role="doc-biblioref">2002</a>)</span>.</p>
+                  <h2 id="lists">Lists</h2>
+                  <ol type="1">
+                  <li>one fish</li>
+                  <li>two fish</li>
+                  <li>red fish</li>
+                  <li>blue fish</li>
+                  </ol>
+                  <h1 id="methods">Methods</h1>
+                  <p>There is an equation, which we can cite with <a href="#eq:eq1">1</a>.</p>
+                  <p><span id="eq:eq1" class="eqnos"><br /><span class="math display">$$J'(p) = \frac{1}{\text{log}(S)}\times\left(-\sum p \text{log}(p)\right)$$</span><br /><span class="eqnos-number">(1)</span></span> </p>
+                  <h1 id="tables">Tables</h1>
+                  <p>We can do tables:</p>
+                  <div id="tbl:1" class="tablenos">
+                  <table>
+                  <caption><span>Table 1:</span> Demonstration of a simple table. </caption>
+                  <thead>
+                  <tr class="header">
+                  <th>Column 1</th>
+                  <th style="text-align: center;">Column 2</th>
+                  <th style="text-align: right;">Column 3</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr class="odd">
+                  <td>c1</td>
+                  <td style="text-align: center;">c2</td>
+                  <td style="text-align: right;"><span class="math inline"><em>α</em></span></td>
+                  </tr>
+                  </tbody>
+                  </table>
+                  </div>
+                  <p>The first column is neat, the second centered and the third right-aligned. We can also cite table with <a href="#tbl:1">1</a></p>
+                  <h1 id="figures">Figures</h1>
+                  <div id="fig:biomes" class="fignos">
+                  <figure>
+                  <img src="figures/biomes.png" alt="" /><figcaption><span>Figure 1:</span> This is the legend of the figure</figcaption>
+                  </figure>
+                  </div>
+                  <p>We can refer to <a href="#fig:biomes">1</a>.</p>
+                  <h1 id="code">Code?</h1>
+                  <p>Yes</p>
+                  <div class="sourceCode" id="cb1"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">for</span> i <span class="kw">in</span> eachindex(x)</span>
+                  <span id="cb1-2"><a href="#cb1-2"></a>  x[i] = zero(eltype(x)) <span class="co"># Don&#39;t do that</span></span>
+                  <span id="cb1-3"><a href="#cb1-3"></a><span class="kw">end</span></span></code></pre></div>
+                  <h1 class="unnumbered" id="references" class="unnumbered">References</h1>
+                  <div id="refs" class="references hanging-indent" role="doc-bibliography">
+                  <div id="ref-Martinez2002">
+                  <p>Martinez, Neo D. 2002. “Constant Connectance in Community Food Webs.” <em>The American Naturalist</em> 139 (6): 1208–18. <a href="https://doi.org/10.1086/285382">https://doi.org/10.1086/285382</a>.</p>
+                  </div>
+                  </div>
+      </article>
+   </body>
+   <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
+   <script src="js/jquery-1.8.3.min.js"></script>
+   <script src="js/jquery-ui-1.9.1.custom.min.js"></script>
+   <script src="js/jquery.tocify.min.js"></script>
+   <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+      <script type="text/javascript" charset="utf-8">
+               $(document).ready(function() {
+
+                      var toc = $("#toc").tocify({
+                          selectors : "h1,h2"
+                      });
+
+                  });
+         </script>
+   </html>

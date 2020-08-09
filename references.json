@@ -1,0 +1,25 @@
+[
+    {
+        "DOI": "10.1086/285382",
+        "author": [
+            {
+                "family": "Martinez",
+                "given": "Neo D."
+            }
+        ],
+        "container-title": "The American Naturalist",
+        "id": "Martinez2002",
+        "issue": "6",
+        "issued": {
+            "date-parts": [
+                [
+                    2002
+                ]
+            ]
+        },
+        "page": "1208-1218",
+        "title": "Constant Connectance in Community Food Webs",
+        "type": "article-journal",
+        "volume": "139"
+    }
+]
