@@ -3,12 +3,14 @@
 
 @font-size: 18px;
 
-@url-color: #428bca;
+@url-color: #0088cc;
 @url-color-hover: darken(@url-color, 15%);
-@ref-color: #e9380c;
+@ref-color: @url-color;
+@ref-color2: #004b70;
 @meta-color: #a0a8a3;
 
 body {
+   // padding-left: 15%;
    font-size: @font-size;
    font-family: @text-font-stack;
    b, strong {
@@ -29,7 +31,9 @@ body {
 header {
    background-color: lighten(@meta-color, 33%);
    h1 {
+      margin-left: 22%;
       margin-top: 0em;
+      padding-bottom: 2em;
    }
 }
 
@@ -42,16 +46,34 @@ a {
 }
 
 article {
+
    p {
+      // margin-left: 15%;
       line-height: 150%;
    }
    &.container {
-      max-width: 800px;
+      margin-left: 22%;
+      max-width: 900px;
+      text-align: justify;
    }
    h1 {
+      // margin-left: 15%;
       margin-top: 3.2em;
    }
    h2 {
+      // margin-left: 15%;
+      margin-top: 2.1em;
+      margin-bottom: 0px;
+      padding-bottom: 0px;
+   }
+   h3 {
+      // margin-left: 15%;
+      margin-top: 2.1em;
+      margin-bottom: 0px;
+      padding-bottom: 0px;
+   }
+   h4 {
+      // margin-left: 15%;
       margin-top: 2.1em;
       margin-bottom: 0px;
       padding-bottom: 0px;
@@ -59,10 +81,12 @@ article {
 }
 
 .citation {
+   padding-bottom: 2px;
    border-bottom: 1px dashed @ref-color;
 }
 
 figure {
+   // margin-left: 25%;
    font-size: 80%;
    text-align: center;
    img {
@@ -82,6 +106,7 @@ figure {
 }
 
 table {
+   // margin-left: 15%;
    border-collapse: collapse;
 }
  
@@ -105,6 +130,7 @@ table th {
 
 .creators{
    .creator {
+      margin-left: 22%;
       margin-bottom: 0.5em;
       .author, .affiliation, .orcid {
          display: inline-block;
@@ -115,7 +141,21 @@ table th {
    }
 }
 
+.supervisors{
+   .supervisor {
+      margin-left: 22%;
+      margin-bottom: 0.5em;
+      .author, .affiliation, .orcid {
+         display: inline-block;
+         color: darken(@meta-color, 10%);
+      }
+      .author{color: @ref-color2; font-weight: 600;}
+      .orcid{padding-left: 2em; font-family: @code-font-stack; float: right;}
+   }
+}
+
 summary {
+   margin-left: 22%;
    padding-top: 2em;
    padding-left: 3em;
    padding-right: 3em;

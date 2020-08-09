@@ -52,7 +52,9 @@ jobs:
         run: |
           pandoc manuscript.md -o rendered/index.html --filter pandoc-xnos --template=.assets/templates/template.html --bibliography=references.json --metadata-file=metadata.json --webtex
           mkdir rendered/css/
-          cp .assets/templates/style.less rendered/css/
+          mkdir rendered/js/
+          cp .assets/templates/{style.less,jquery.tocify.css,bootstrap.css} rendered/css/
+          cp .assets/templates/{jquery-1.8.3.min.js,jquery-ui-1.9.1.custom.min.js,jquery.tocify.min.js} rendered/js/
       - name: Build the tex file
         run: pandoc manuscript.md -s -o rendered/${{ env.repo_name }}.tex --filter pandoc-xnos --bibliography=references.json --metadata-file=metadata.json --template=.assets/templates/template.tex
       - name: Build Word document

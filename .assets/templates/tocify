@@ -1,0 +1,9 @@
+<script type="text/javascript" charset="utf-8">
+         $(document).ready(function() {
+
+                var toc = $("#toc").tocify({
+                    selectors : "h1,h2"
+                });
+
+            });
+   </script>
